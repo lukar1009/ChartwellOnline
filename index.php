@@ -19,6 +19,28 @@
                     <img src="images/chartwell.png" alt="">
                 </a>
             </div>
+            <?php 
+            
+            if(isset($_GET['wrong'])){
+                ?>
+
+                <div class="alert alert-danger" role="alert">
+                    Wrong username or password, please try again.
+                </div>
+
+                <?php
+            }
+            if(isset($_GET['empty'])){
+                ?>
+
+                <div class="alert alert-danger" role="alert">
+                    No field must be empty, please try again.
+                </div>
+
+                <?php
+            }
+            
+            ?>
             <div class="col-12 form-input">
                 <form action="./includes/login.php" method="post">
                     <div class="form-group">

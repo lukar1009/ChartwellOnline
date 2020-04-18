@@ -19,6 +19,28 @@
                     <img src="images/chartwell.png" alt="">
                 </a>
             </div>
+            <?php 
+            
+            if(isset($_GET['success'])){
+                ?>
+
+                <div class="alert alert-success" role="alert">
+                    Successfully registered user!
+                </div>
+
+                <?php
+            }
+            if(isset($_GET['empty'])){
+                ?>
+
+                <div class="alert alert-danger" role="alert">
+                    Wrong input data, please try again.
+                </div>
+
+                <?php
+            }
+            
+            ?>
             <div class="col-12 form-input">
                 <form action="./includes/register.php" method="post">
                    

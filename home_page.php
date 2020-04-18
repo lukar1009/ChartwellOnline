@@ -19,7 +19,17 @@ session_start();
         <!-- <h1 class="text-light display-4 text-center font-italic">Welcome to Chartwell ONLINE CLASSROOM</h1>
         <p class="mt-4 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas obcaecati, similique voluptatum quos, ratione laudantium optio dolor eveniet suscipit provident sit. Ea reiciendis tenetur enim omnis veniam totam amet excepturi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis nulla assumenda, at eum ipsam sit corporis vel fugit odio hic, sint doloribus cum! Modi cum nostrum nobis commodi aut?</p> -->
         <div class="jumbotron mb-0"style="height: 500px;">
-            <h1 class="display-4">Hello, Username!</h1>
+            <?php 
+            
+            if(isset($_SESSION['firstname']) && isset($_SESSION['lastname'])){
+                $firstname = $_SESSION['firstname'];
+                $lastname = $_SESSION['lastname'];
+                echo "<h1 class='display-4'>Hello, $firstname!</h1>";                
+            }else{
+                echo "<h1 class='display-4'>Hello there!</h1>";
+            }
+            
+            ?>
             <p class="lead text-justify">Welcome to Chartwell Online Classroom! This is made for all of you pupils who want to take your learning to a next level!</p>
             <hr class="my-4">
             <p class="text-justify">Please follow the instructions made by your teachers, and do not attempt to do any illegal stuff.</p>
