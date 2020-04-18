@@ -1,21 +1,11 @@
 body{
-    background-color:#e31d42;
-}
-
-.panel{
-    transition: all 1s ease-in-out;
-}
-
-.panel:hover{
-    transform: scale(1.1);
+    background-color: #e31d42;
 }
 
 li:hover{
     border-radius: 5px;
     background-color: #e31d42;
-    color: white;
 }
-
 
 .nav-link:hover{
     color: white !important;

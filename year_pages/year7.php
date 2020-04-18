@@ -42,6 +42,35 @@ ob_start();
             </div>
         </div>
     </div>
+
+
+    <div class="col-lg-4 col-md-6 text-center mb-3">
+        <div class="panel bg-light pt-4 pb-4 pl-2 pr-2 rounded">
+            <div class="panel-body">
+                <img style="height: 400px; width: 500px;" src="./images/history.jpg" alt="" class="img-responsive img-thumbnail">
+                <h4>History</h4>
+                <button class="btn btn-danger">Start learning!</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 text-center mb-3">
+        <div class="panel bg-light pt-4 pb-4 pl-2 pr-2 rounded">
+            <div class="panel-body">
+                <img style="height: 400px; width: 500px;" class="img-responsive img-thumbnail" src="./images/geography.jpg" alt="">
+                <h4>Geography</h4>
+                <button class="btn btn-danger">Start learning!</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 text-center mb-3">
+        <div class="panel bg-light pt-4 pb-4 pl-2 pr-2 rounded">
+            <div class="panel-body">
+                <img style="height: 400px; width: 500px;" src="./images/physics.jpg" alt="" class="img-responsive img-thumbnail">
+                <h4>Physics</h4>
+                <button class="btn btn-danger">Start learning!</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 
