@@ -7,7 +7,7 @@
     <title>[Chartwell] Online Classes</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
-    <link rel="stylesheet" href="./css/login_style.css">
+    <link rel="stylesheet" href="./css/loginstyle.css">
 </head>
 <body>
 
@@ -20,14 +20,14 @@
                 </a>
             </div>
             <div class="col-12 form-input">
-                <form action="">
+                <form action="./includes/login.php" method="post">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Enter Username:">
+                        <input id="username" name="username" type="text" class="form-control" placeholder="Enter Username:">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Enter Username:">
+                        <input id="password" name="password" type="password" class="form-control" placeholder="Enter Password:">
                     </div>
-                    <button class="btn btn-success">Login!</button>
+                    <button name="submit" type="submit" class="btn btn-success">Login!</button>
                 </form>
             </div>
             <div class="col-12 websitelink">

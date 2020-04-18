@@ -30,6 +30,17 @@ body{
     margin-bottom: 25px;
 }
 
+.formselect{
+    height: 42px;
+    width: 120px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 18px;
+    padding-top: 6px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
 .form-group input{
     height: 42px;
     border-radius: 5px;
@@ -37,6 +48,10 @@ body{
     font-size: 18px;
     letter-spacing: 2px;
     padding-left: 54px;
+}
+
+#username{
+    margin-top: 25px;
 }
 
 .form-group::before{
@@ -51,6 +66,30 @@ body{
 
 .form-group:last-of-type::before{
     content:"\f023";
+}
+
+.form-group #username{
+    content:"\f007";
+}
+
+.form-group #password{
+    content:"\f023";
+}
+
+.form-group #firstname{
+    content:"\f573";
+}
+
+.form-group #lastname{
+    content:"\f573";
+}
+
+.form-group #email{
+    content:"\f1fa";
+}
+
+.form-group #role{
+    content:"\f552";
 }
 
 .form-input button{

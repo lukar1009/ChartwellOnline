@@ -1,5 +1,12 @@
+
+<?php
+ob_start();
+session_start();
+?>
+
 <?php require "includes/header.php"; ?>
 <?php require "includes/navigation.php"; ?>
+
 
 <div class="container-fluid">
 

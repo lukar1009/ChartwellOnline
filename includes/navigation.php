@@ -30,8 +30,19 @@
       </li>
     </ul>
     <ul class="navbar-nav mr-sm-2">
+        <?php 
+        
+        if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'admin'):
+        
+        ?>
         <li class="nav-item">
-            <a class="nav-link" href="#">Sign Out</a>
+            <a class="nav-link" href="register_view.php">Register User</a>
+        </li>
+        <?php 
+        endif;
+        ?>
+        <li class="nav-item">
+            <a class="nav-link" href="./includes/logout.php">Sign Out</a>
         </li>
     </ul>
     <!-- <form class="form-inline my-2 my-lg-0">
