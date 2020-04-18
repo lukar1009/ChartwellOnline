@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="home_page.php">Home</a>
+        <a class="nav-link" href="../home_page.php">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="https://chartwell.edu.rs/">Chartwell Website</a>
@@ -36,13 +36,13 @@
         
         ?>
         <li class="nav-item">
-            <a class="nav-link" href="register_view.php">Register User</a>
+            <a class="nav-link" href="../register_view.php">Register User</a>
         </li>
         <?php 
         endif;
         ?>
         <li class="nav-item">
-            <a class="nav-link" href="./includes/logout.php">Sign Out</a>
+            <a class="nav-link" href="../includes/logout.php">Sign Out</a>
         </li>
     </ul>
     <!-- <form class="form-inline my-2 my-lg-0">

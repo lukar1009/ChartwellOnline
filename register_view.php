@@ -1,4 +1,9 @@
-<?php require "./includes/db.php"; ?>
+<?php 
+session_start();
+if(!isset($_SESSION['username'])){
+    header("Location: index.php");
+}
+require "./includes/db.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
