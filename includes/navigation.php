@@ -36,7 +36,18 @@
         
         ?>
         <li class="nav-item">
-            <a class="nav-link" href="register_view.php">Register User</a>
+            <a class="nav-link" href="./admin/index.php">Admin Panel</a>
+        </li>
+        <?php 
+        endif;
+        ?>
+        <?php 
+        
+        if(isset($_SESSION['user_role']) && $_SESSION['user_role'] == 'teacher'):
+        
+        ?>
+        <li class="nav-item">
+            <a class="nav-link" href="new_lesson_page.php">Insert New Lesson</a>
         </li>
         <?php 
         endif;

@@ -96,6 +96,17 @@ require "./includes/db.php"; ?>
             <div class="col-12 websitelink">
                 <a href="home_page.php">Go back to Online Classroom.</a>
             </div>
+            <?php 
+            
+            if(isset($_SESSION['user_role']) && $_SESSION['user_role'] === "admin"){
+                ?>
+            <div class="col-12 websitelink">
+                <a href="./admin/index.php">Go back to Admin Panel.</a>
+            </div>
+                <?php
+            }
+            
+            ?>
         </div>
     </div>
 </div>
