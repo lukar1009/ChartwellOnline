@@ -11,10 +11,10 @@ ob_start();
 
 <div class="container-fluid">
 
-<div class="row">
+<div class="row  scene_element scene_element--fadeinright">
     <p class="display-3 col-12 text-center text-white">Choose a subject:</p>
 </div>
-<div class="row mb-3">
+<div class="row mb-3  scene_element scene_element--fadeinup">
     <div class="col-lg-4 col-md-6 text-center mb-3">
         <div class="panel bg-light pt-4 pb-4 pl-2 pr-2 rounded">
             <div class="panel-body">

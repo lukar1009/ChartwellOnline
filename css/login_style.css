@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+}
+
 body{
     background-image: linear-gradient(to right,#e31d42 0%,#b8b8b86e 50%, #e31d42 100%);
 }
@@ -116,4 +126,14 @@ body{
 
 .websitelink a{
     color: #daf1ff;
+}
+
+.scene_element{
+    animation-duration: 3.5s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+.scene_element--fadein{
+    animation-name: fadeIn;
 }

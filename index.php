@@ -7,13 +7,13 @@
     <title>[Chartwell] Online Classes</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
-    <link rel="stylesheet" href="./css/loginstyle.css">
+    <link rel="stylesheet" href="./css/login_style.css">
 </head>
 <body>
 
-<div class="modal-dialog text-center">
+<div class="modal-dialog text-center ">
     <div class="col-sm-9 main-section">
-        <div class="modal-content">
+        <div class="modal-content scene_element scene_element--fadein">
             <div class="col-12 user-img">
                 <a href="https://chartwell.edu.rs/">
                     <img src="images/chartwell.png" alt="">
