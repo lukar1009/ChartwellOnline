@@ -67,6 +67,23 @@ require "./includes/db.php"; ?>
                         </select>    
                         <!-- <input id="role" name="user_role" type="text" class="form-control" placeholder="Role"> -->
                     </div>
+                    <div class="teacher-div formselect">
+                        <select name="teacher-subject" id="teacher-subject">
+                            <option value="error">Select Subject:</option>
+                            <?php 
+                            
+                            $query = "select * from subjects";
+                            $select_subject_query = mysqli_query($connection, $query);
+                            while($row = mysqli_fetch_assoc($select_subject_query)){
+                                $subject_id = $row['id'];
+                                $subject_name = $row['subject_name'];
+                                echo "<option value=$subject_id>$subject_name</option>";
+                            }
+
+                            ?>
+
+                        </select>
+                    </div>
                     <div class="form-group">
                         <input id="username" name="username" type="text" class="form-control" placeholder="Username">
                     </div>
