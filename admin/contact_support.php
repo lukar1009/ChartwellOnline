@@ -15,7 +15,8 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                    <?php 
+                    <!-- NON-AJAX GETTING RESPONSE -->
+                    <!-- <?php 
 
                     if(isset($_GET['success'])){
                         ?>
@@ -47,8 +48,9 @@
                         <?php
                     }
                     
-                    ?>
+                    ?> -->
 
+                    <!-- DIV FOR AJAX RESPONSE -->
                     <div class="form_message" role="alert">
             
                     </div>

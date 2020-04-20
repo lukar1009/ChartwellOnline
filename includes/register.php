@@ -7,13 +7,18 @@ if(isset($_POST['submit'])){
     $user_email = $_POST['user_email'];
     $user_role = $_POST['user_role'];
     $username = $_POST['username'];
-    $user_password = $_POST['user_password'];
+    $user_password = $_POST['password'];
     $teacher_subject_id = $_POST['teacher-subject'];
+
+    //response variable
+    $output = "";
+
     //echo "<h1> TEST $teacher_subject_id</h1>";
     if(!empty($user_firstname) && !empty($user_lastname) && !empty($user_email) && !empty($user_role) && $user_role !== "error" && !empty($username) && !empty($user_password)){
         if($user_role == "teacher" && $teacher_subject_id === "error"){
             //$message = "Fields must not be empty!";
-            header("Location: ../register_view.php?empty=1");            
+            // header("Location: ../register_view.php?empty=1");
+            $output = "Wrong input data, please try again.";            
         }else{
 
             $user_firstname = mysqli_real_escape_string($connection, $user_firstname);
@@ -63,17 +68,20 @@ if(isset($_POST['submit'])){
             }
             
             //$message = "Your registration is submitted!";
-            header("Location: ../register_view.php?success=1");
+            // header("Location: ../register_view.php?success=1");
+            $output = "Successfully registered user!";
         }
     }else{
         //$message = "Fields must not be empty!";
-        header("Location: ../register_view.php?empty=1");
+        // header("Location: ../register_view.php?empty=1");
+        $output = "Wrong input data, please try again.";
     }
 }else{
     //da se ne javlja greska kada se ne klikne dugme submit!
     //$message = "";
-    header("Location: ../register_view.php?empty=1");
+    // header("Location: ../register_view.php?empty=1");
+    $output = "Wrong input data, please try again.";
 }
-
+die($output);
 
 ?>
