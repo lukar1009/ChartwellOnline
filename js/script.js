@@ -60,3 +60,29 @@ function registerUser(){
     });
 }
 
+function login(){
+    $(".login_form_message").removeClass("alert");
+    $(".login_form_message").removeClass("alert-success");
+    $(".login_form_message").removeClass("alert-danger");
+    $(".login_form_message").addClass("alert");
+
+    var username = $("#username").val();
+    var password = $("#password").val();
+    var submit = $("#submit").val();
+
+    $.post("./includes/login.php", {
+        "username": username,
+        "password": password,
+        "submit": submit
+    }, function(data){
+        if(data == "Wrong username or password, please try again." || data == "No field must be empty, please try again."){
+            $(".login_form_message").addClass("alert-danger");
+        }else{
+            //$(".register_form_message").addClass("alert-success");
+            //$("#fullname, #lastname, #email, #user_role, #mail_content").val("");
+            window.location = './home_page.php';
+        }
+        $(".login_form_message").html(data);
+    });
+}
+

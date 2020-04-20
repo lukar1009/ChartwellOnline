@@ -17,13 +17,13 @@
           Choose Year
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../year_pages/year7.php">Year 7</a>
-          <a class="dropdown-item" href="../year_pages/year8.php">Year 8</a>
-          <a class="dropdown-item" href="../year_pages/year9.php">Year 9</a>
-          <a class="dropdown-item" href="../year_pages/year10.php">Year 10</a>
-          <a class="dropdown-item" href="../year_pages/year11.php">Year 11</a>
-          <a class="dropdown-item" href="../year_pages/year12.php">Year 12</a>
-          <a class="dropdown-item" href="../year_pages/year13.php">Year 13</a>
+          <a class="dropdown-item" href="../year_pages/year7.php?year=7">Year 7</a>
+          <a class="dropdown-item" href="../year_pages/year8.php?year=8">Year 8</a>
+          <a class="dropdown-item" href="../year_pages/year9.php?year=9">Year 9</a>
+          <a class="dropdown-item" href="../year_pages/year10.php?year=10">Year 10</a>
+          <a class="dropdown-item" href="../year_pages/year11.php?year=11">Year 11</a>
+          <a class="dropdown-item" href="../year_pages/year12.php?year=12">Year 12</a>
+          <a class="dropdown-item" href="../year_pages/year13.php?year=13">Year 13</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Additional Materials</a>
         </div>

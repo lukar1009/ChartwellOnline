@@ -6,6 +6,7 @@ session_start();
 if(isset($_POST['submit'])){
     $username = mysqli_real_escape_string($connection, $_POST['username']);
     $password = mysqli_real_escape_string($connection, $_POST['password']);
+    //$output = "";
 
     if(!empty($username) && !empty($password)){
         $query = "select * from users where username = '$username'";
@@ -34,13 +35,19 @@ if(isset($_POST['submit'])){
             $_SESSION['user_role'] = $db_user_role;
 
             header("Location: ../home_page.php");
+            //$output = "success";
         }else{
             header("Location: ../index.php?wrong=1");
+            //$output = "Wrong username or password, please try again.";
+            //die($output);
         }
     }else{
         //nije uneto neko od polja
         header("Location: ../index.php?empty=1");
+        //$output = "No field must be empty, please try again.";
+        //die($output);
     }
+    //die($output);
 }
 
 ?>
