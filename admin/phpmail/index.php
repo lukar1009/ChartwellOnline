@@ -4,9 +4,9 @@
 require "phpmailer/PHPMailerAutoload.php";
 $mejl = new PHPMailer();
 $mejl->isSMTP();
-$mejl->SMTPDebug = 3;
+$mejl->SMTPDebug = 0;
 $mejl->isHTML(true);
-$mail->Sendmail = '/usr/sbin/sendmail';
+//$mail->Sendmail = '/usr/sbin/sendmail';
 
 
 if(isset($_POST['submit'])){
@@ -14,12 +14,26 @@ if(isset($_POST['submit'])){
     $fullname = $_POST['fullname'];
     $user_mail = $_POST['mail'];
     $subject = $_POST['subject'];
-    $mail_body = $_POST['mail_content'];
+    $mail_body = $_POST['mail_body'];
+    
+    //response output
+    $output = "";
+
+    //validators
+    $errorEmpty = false;
+    $errorSend = false;
+    $mailSent = false;
 
     if(empty($fullname) || empty($user_mail) || empty($subject) || empty($mail_body)){
         
-        header("Location: ../contact_support.php?empty=1");
-    
+        //header("Location: ../contact_support.php?empty=1");
+        //echo "<span>No field must be empty, please try again.</span>";
+        // $output = json_encode(array( //create JSON data
+        //     'type'=>'empty', 
+        //     'text' => 'No field must be empty, please try again.'
+        // ));
+        $output = "No field must be empty, please try again.";
+        $errorEmpty = true;
     }else{
 
         //parametri za gmail nalog
@@ -46,13 +60,29 @@ if(isset($_POST['submit'])){
         //slanje mejla
         if(!$mejl->send()){
             //echo "Mejl nije poslat" . $mejl->ErrorInfo;
-            header("Location: ../contact_support.php?error=1");
+            //header("Location: ../contact_support.php?error=1");
+            //echo "<span>Server down, please call support.</span>";
+            // $output = json_encode(array( //create JSON data
+            //     'type'=>'notSent', 
+            //     'text' => 'Server down, please call support.'
+            // ));
+            $output = "Server down, please call support.";
+            $errorSend = true;
         }else{
             //echo "Mejl je poslat";
-            header("Location: ../contact_support.php?success=1");
+            //header("Location: ../contact_support.php?success=1");
+            // echo "<span>Mail sent!</span>";
+            // $output = json_encode(array( //create JSON data
+            //     'type'=>'sent', 
+            //     'text' => 'Mail sent!'
+            // ));
+            $output = "Mail sent!";
+            $mailSent = true;
         }
 
     }
+    //echo $output;
+    die($output);
 }
 
 

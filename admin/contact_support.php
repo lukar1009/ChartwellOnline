@@ -31,7 +31,7 @@
                         ?>
 
                         <div class="alert alert-danger" role="alert">
-                            Server down, please call support on the number above.
+                            Server down, please call support on the support.
                         </div>
 
                         <?php
@@ -49,8 +49,12 @@
                     
                     ?>
 
+                    <div class="form_message" role="alert">
+            
+                    </div>
+
                     <div class="col-lg-6 p-5 form-input scene_element scene_element--fadein">
-                        <form action="./phpmail/index.php" method="post">
+                        <form id="contact_form" action="javascript: sendmail();" method="post">
                             <div class="form-group">
                                 <input id="fullname" name="fullname" type="text" class="form-control" placeholder="Enter Your Name:">
                             </div>
@@ -63,7 +67,7 @@
                             <div class="form-group">
                                 <textarea class="form-control" name="mail_content" id="mail_content" cols="30" rows="7" placeholder="Enter your message:"></textarea>
                             </div>
-                            <button name="submit" type="submit" class="btn btn-danger">Contact me!</button>
+                            <button id="mail_submit" name="submit" type="submit" class="btn btn-danger">Contact me!</button>
                         </form>
                     </div>
                     <div class="col-lg-6 form-input scene_element scene_element--fadeinright">
