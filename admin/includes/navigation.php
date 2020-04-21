@@ -18,7 +18,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <?php 
                 if(isset($_SESSION['firstname'])){
-                    echo "Admin - " . $_SESSION['firstname'];
+                    echo "Logged User - " . $_SESSION['firstname'];
                 }else{
                     echo "Admin User";
                 }
@@ -38,6 +38,7 @@
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
         <div class="gornji-deo collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
+                <li><a href="./index.php"><i class="fa fa-fw fa-home"></i> Admin Panel Home</a></li>
                 <li>
                     <a class="text-white" href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa text-white fa-fw fa-search"></i> View <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-1" class="collapse">
@@ -50,7 +51,7 @@
                     <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fa-user-plus"></i> Insert <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-2" class="collapse">
                         <li><a href="../register_view.php"><i class="fa fa-angle-double-right"></i> Register New User</a></li>
-                        <li><a href="../new_lesson_page.php"><i class="fa fa-angle-double-right"></i> Insert New Lesson</a></li>
+                        <li><a href="../add_lesson.php"><i class="fa fa-angle-double-right"></i> Insert New Lesson</a></li>
                     </ul>
                 </li>
                 <li>

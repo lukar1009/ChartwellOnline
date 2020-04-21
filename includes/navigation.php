@@ -47,7 +47,7 @@
         
         ?>
         <li class="nav-item">
-            <a class="nav-link" href="new_lesson_page.php">Insert New Lesson</a>
+            <a class="nav-link" href="add_lesson.php">Insert New Lesson</a>
         </li>
         <?php 
         endif;

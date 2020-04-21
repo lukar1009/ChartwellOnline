@@ -86,3 +86,88 @@ function login(){
     });
 }
 
+function addLesson(){
+    $(".add_lesson_form_message").removeClass("alert");
+    $(".add_lesson_message").removeClass("alert-success");
+    $(".add_lesson_form_message").removeClass("alert-danger");
+    $(".add_lesson_form_message").addClass("alert");
+
+    var lesson_name = $("#lesson_name").val();
+    var lesson_desc = $("#lesson_desc").val();
+    var lesson_year = $("#lesson_year").val();
+    var lesson_subject = $("#lesson_subject").val();
+    var submit = $("#submit").val();
+    if(lesson_year == "error" || lesson_subject == "error"){
+        $(".add_lesson_form_message").addClass("alert-danger");
+        $(".add_lesson_form_message").html("Invalid option selected!");
+        return;
+    }else{
+        var video = $("#video")[0].files[0];
+        var attachment = $("#attachment")[0].files[0];
+
+        var video_name = video.name;
+        var video_extension = video_name.split('.').pop().toLowerCase();
+        if(jQuery.inArray(video_extension, ['mp3', 'mp4']) == -1){
+            $(".add_lesson_form_message").addClass("alert-danger");
+            $(".add_lesson_form_message").html("Invalid file extension!");
+            return;    
+        }
+        var video_size = video.size;
+        // if(video_size > 2000000){
+        //     $(".add_lesson_form_message").addClass("alert-danger");
+        //     $(".add_lesson_form_message").html("Video must be smaller than 20MB!");
+        //     return;
+        // }
+
+        var att_name = attachment.name;
+        var att_extension = att_name.split('.').pop().toLowerCase();
+        if(jQuery.inArray(att_extension, ['pdf', 'zip', 'docx', 'ppt', 'xls']) == -1){
+            $(".add_lesson_form_message").addClass("alert-danger");
+            $(".add_lesson_form_message").html("Invalid file extension!");
+            return;    
+        }
+        var att_size = attachment.size;
+        if(att_size > 2000000){
+            $(".add_lesson_form_message").addClass("alert-danger");
+            $(".add_lesson_form_message").html("Attachment must be smaller than 20MB!");
+            return;
+        }
+
+        var form_data = new FormData();
+        form_data.append("video", video);
+        form_data.append("attachment", attachment);
+        form_data.append("lesson_name", lesson_name);
+        form_data.append("lesson_desc", lesson_desc);
+        form_data.append("lesson_year", lesson_year);
+        form_data.append("lesson_subject", lesson_subject);
+        form_data.append("submit", submit);
+            
+    // "lesson_name": lesson_name,
+    // "lesson_desc": lesson_desc,
+    // "lesson_year": lesson_year,
+    // "lesson_subject": lesson_subject,
+    // "video": video,
+    // "attachment": attachment,
+    // "submit": submit
+        $.ajax({
+            url: "./includes/new_lesson.php",
+            method: "POST",
+            data: form_data,
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function(data){
+                if(data == "Successfully added lesson!"){
+                    $(".add_lesson_form_message").addClass("alert-success");
+                }else{
+                    $(".add_lesson_form_message").addClass("alert-danger");
+                }
+                $(".add_lesson_form_message").html(data);
+            }
+        });
+
+        
+    }
+
+}
+
