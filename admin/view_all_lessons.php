@@ -18,6 +18,7 @@
                 <thead>
                     <tr>
                     <th scope="col">Subject</th>
+                    <th scope="col">Year</th>
                     <th scope="col">Lesson Name</th>
                     <th scope="col">Lesson Description</th>
                     <th scope="col">Edit</th>
@@ -27,26 +28,20 @@
                 <tbody>
                     <?php 
                     
-                    $query = "select * from lessons";
+                    $query = "select subjects.subject_name, lessons.lesson_year, lessons.lesson_name, lessons.lesson_desc from lessons join subjects on lessons.subject_id = subjects.id";
                     $select_lessons_query = mysqli_query($connection, $query);
                     if(!$select_lessons_query){
                         die("QUERY1 failed: ". mysqli_error($connection));
                     }
                     while($row = mysqli_fetch_assoc($select_lessons_query)){
-                        $lesson_id = $row['id'];
+                        $subject_name = $row['subject_name'];
+                        $lesson_year = $row['lesson_year'];
                         $lesson_name = $row['lesson_name'];
                         $lesson_desc = $row['lesson_desc'];
-                        
-                        $inner_query = "select * from subjects where id = $lesson_id";
-                        $select_subject = mysqli_query($connection, $inner_query);
-                        if(!$select_subject){
-                            die("QUERY2 failed: ". mysqli_error($connection));
-                        }
-                        $inner_row = mysqli_fetch_assoc($select_subject);
-                        $subject_name = $inner_row['subject_name'];
 
                         echo "<tr>";
                         echo    "<td>$subject_name</td>";
+                        echo    "<td>$lesson_year</td>";
                         echo    "<td>$lesson_name</td>";
                         echo    "<td>$lesson_desc</td>";
                         echo    "<td><a href='#'>Edit</a></td>";

@@ -12,7 +12,7 @@ require "./includes/db.php"; ?>
     <title>[Chartwell] Online Classes</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
-    <link rel="stylesheet" href="./css/login_style.css">
+    <link rel="stylesheet" href="./css/newlesson.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
@@ -64,7 +64,7 @@ require "./includes/db.php"; ?>
                     <div class="form-group">
                         <textarea required class="form-control" name="lesson_desc" id="lesson_desc" cols="30" rows="7" placeholder="Lesson Description"></textarea>
                     </div>
-                    <div class="formselect ml-1">
+                    <div class="formselect">
                         <select required name="lesson_year" id="lesson_year">
                             <option value='error'>Select Subject:</option>
                             <option value='7'>Year 7</option>";
@@ -77,7 +77,7 @@ require "./includes/db.php"; ?>
                         </select>    
                         <!-- <input id="role" name="user_role" type="text" class="form-control" placeholder="Role"> -->
                     </div>
-                    <div class="teacher-div formselect ml-4">
+                    <div class="teacher-div formselect">
                         <select required name="lesson_subject" id="lesson_subject">
                             <?php 
                             
@@ -104,10 +104,10 @@ require "./includes/db.php"; ?>
 
                         </select>
                     </div>
-                    <div class="teacher-div formselect ml-4">
+                    <div class="teacher-div formselect">
                         <input required class="" id="video" type="file" name="video"><br>
                     </div>
-                    <div class="teacher-div formselect ml-4">
+                    <div class="teacher-div formselect">
                         <input required class="" id="attachment" type="file" name="attachment"><br>
                     </div>
                     <button id="submit" name="submit" type="submit" class="btn btn-success">Submit!</button>
