@@ -78,6 +78,10 @@ if(isset($_GET['year'])){
         </div>
     </div>
 </div>
+<div class="col-lg-12 pl-3 pr-3 scene_element scene_element--fadeinright">
+        <hr class="bg-white">
+        <p class="text-center text-white font-italic">Chartwell International School, Belgrade, Serbia</p>
+</div>
 
 
 

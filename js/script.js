@@ -142,13 +142,6 @@ function addLesson(){
         form_data.append("lesson_subject", lesson_subject);
         form_data.append("submit", submit);
             
-    // "lesson_name": lesson_name,
-    // "lesson_desc": lesson_desc,
-    // "lesson_year": lesson_year,
-    // "lesson_subject": lesson_subject,
-    // "video": video,
-    // "attachment": attachment,
-    // "submit": submit
         $.ajax({
             url: "./includes/new_lesson.php",
             method: "POST",

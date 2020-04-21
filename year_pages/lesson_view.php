@@ -40,6 +40,7 @@ if(isset($_GET['year']) && isset($_GET['sub'])){
     //i prikazivati u panel div-u u odredjenim poljima
 
     while($row = mysqli_fetch_assoc($select_lesson)){
+        $lesson_id = $row['id'];
         $lesson_name = $row['lesson_name'];
         $lesson_video = $row['lesson_video']
 
@@ -57,7 +58,7 @@ if(isset($_GET['year']) && isset($_GET['sub'])){
                         <video controls="true" class="embed-responsive-item" src="./upload/<?php echo $lesson_video; ?>" allowfullscreen></video>
                     </div>
                     <h4><?php echo $lesson_name; ?></h4>
-                    <button class="btn btn-danger"><a class="nav-link text-white" href="#">Read more...</a></button>
+                    <button class="btn btn-danger"><a class="nav-link text-white" href="./lesson_detail.php?less=<?php echo $lesson_id; ?>">Read more...</a></button>
                 </div>
             </div>
         </div>
@@ -117,6 +118,10 @@ if(isset($_GET['year']) && isset($_GET['sub'])){
         </div>
     </div> -->
 
+</div>
+<div class="col-lg-12 pl-3 pr-3 scene_element scene_element--fadeinright">
+        <hr class="bg-white">
+        <p class="text-center text-white font-italic">Chartwell International School, Belgrade, Serbia</p>
 </div>
 
 <?php require "./includes/year_footer.php"; ?>

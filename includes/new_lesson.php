@@ -2,13 +2,6 @@
 require "db.php";
 session_start();
 if(isset($_POST["submit"])){
-    // "lesson_name": lesson_name,
-    // "lesson_desc": lesson_desc,
-    // "lesson_year": lesson_year,
-    // "lesson_subject": lesson_subject,
-    // "video": video,
-    // "attachment": attachment,
-    // "submit": submit
 
     $lesson_name = $_POST['lesson_name'];
     $lesson_desc = $_POST['lesson_desc'];
@@ -41,7 +34,7 @@ if(isset($_POST["submit"])){
     move_uploaded_file($_FILES["attachment"]["tmp_name"], $att_location);
 
     //database entry
-    $query = "insert into lessons values (NULL, '$lesson_subject', '$lesson_year', '$lesson_name', '$lesson_desc', '$name', '$att_name')";
+    $query = "insert into lessons values (NULL, '$lesson_subject', '$lesson_year', '$lesson_name', '$lesson_desc', '$name', '$new_att_name')";
     $result = mysqli_query($connection, $query);
     if(!$result){
         die("QUERYnew_lesson FAILED: " . mysqli_error($connection));
