@@ -7,8 +7,7 @@ $("#students_table").ready(function(){
 
 $("#lessons_table").ready(function(){
     setInterval(function(){
-        viewAllStudents();
-        viewAllTeachers();
+        viewAllLessons();
     }, 500);
 });
 
@@ -21,7 +20,7 @@ function viewAllTeachers(){
 }
 
 function viewAllLessons(){
-    $("#teachers_table").load("./includes/select_teachers.php");
+    $("#lessons_table").load("./includes/select_lessons.php");
 }
 
 function deleteUser(user_id){
@@ -33,6 +32,14 @@ function deleteUser(user_id){
             alert(response_message);
         }
     );
+}
+
+function deleteLesson(lesson_id){
+    $.post("./includes/delete_lesson.php",{
+        lesson_id: lesson_id
+    }, function(data, status){
+        alert(data);
+    });
 }
 
 $(function(){
