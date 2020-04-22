@@ -40,12 +40,15 @@
                     <form id="lesson_form" action="javascript: editLesson(<?php echo $lesson_id; ?>, <?php echo $lesson_subject_id; ?>, <?php echo $lesson_year; ?>, '<?php echo $lesson_video; ?>', '<?php echo $lesson_file; ?>')" method="post">
                     
                         <div class="form-group">
+                            <h4 class="text-info">Lesson Title</h4>
                             <input required id="lesson_name" name="lesson_name" type="text" class="form-control" value="<?php echo $lesson_name; ?>">
                         </div>
                         <div class="form-group">
+                            <h4 class="text-info">Lesson Description</h4>
                             <textarea required class="form-control" name="lesson_desc" id="lesson_desc" cols="30" rows="7"><?php echo $lesson_desc; ?></textarea>
                         </div>
                         <div class="form-group">
+                            <h4 class="text-info">Lesson Year</h4>
                             <h5 class="text-danger">If you don't select the year, it will stay the same.</h5>
                             <select required name="lesson_year" id="lesson_year">
                                 <option value='error'>Select Year:</option>
@@ -60,6 +63,7 @@
                             <!-- <input id="role" name="user_role" type="text" class="form-control" placeholder="Role"> -->
                         </div>
                         <div class="teacher-div form-group">
+                            <h4 class="text-info">Lesson Subject</h4>
                             <h5 class="text-danger">If you don't select the subject, it will stay the same.</h5>
                             <select required name="lesson_subject" id="lesson_subject">
                                 <?php 
@@ -80,10 +84,12 @@
                             </select>
                         </div>
                         <div class="teacher-div form-group">
+                            <h4 class="text-info">Lesson Video</h4>
                             <h5 class="text-danger">If you don't want to change the video, do not choose any file.</h5>
                             <input class="" id="video" type="file" name="video"><br>
                         </div>
                         <div class="teacher-div form-group">
+                            <h4 class="text-info">Lesson Attachment</h4>
                             <h5 class="text-danger">If you don't want to change the attachment, do not choose any file.</h5>
                             <input class="" id="attachment" type="file" name="attachment"><br>
                         </div>
