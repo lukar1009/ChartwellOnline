@@ -212,3 +212,7 @@
 .scene_element--fadeinright{
     animation-name: fadeInRight;
 }
+
+.btn .btn-danger{
+    background-color: #e31d42;
+}

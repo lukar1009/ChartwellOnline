@@ -22,7 +22,6 @@
                     <th scope="col">Author Name</th>
                     <th scope="col">Date</th>
                     <th scope="col">Comment Content</th>
-                    <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                     </tr>
                 </thead>

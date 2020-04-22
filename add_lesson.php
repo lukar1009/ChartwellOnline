@@ -66,7 +66,7 @@ require "./includes/db.php"; ?>
                     </div>
                     <div class="formselect">
                         <select required name="lesson_year" id="lesson_year">
-                            <option value='error'>Select Subject:</option>
+                            <option value='error'>Select Year:</option>
                             <option value='7'>Year 7</option>";
                             <option value='8'>Year 8</option>
                             <option value='9'>Year 9</option>
@@ -110,7 +110,7 @@ require "./includes/db.php"; ?>
                     <div class="teacher-div formselect">
                         <input required class="" id="attachment" type="file" name="attachment"><br>
                     </div>
-                    <button id="submit" name="submit" type="submit" class="btn btn-success">Submit!</button>
+                    <button id="submit" name="submit" type="submit" class="btn btn-danger">Submit!</button>
                 </form>
             </div>
             <div class="col-12 websitelink">

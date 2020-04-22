@@ -11,6 +11,7 @@
                 <div class="jumbotron">
                     <h1 class="display-4 p-4">Need help? Contact me!</h1>
                     <p class="lead p-4">If you need any source of support, you can send me an e-mail through a form below.</p>
+                    <p class="lead p-4"><i>IMPORTANT NOTE: It might take several seconds for message of successful mail sending to pop-up due to mail sending process, please be patient!</i></p>
                 </div>
             </div>
             <!-- /.row -->

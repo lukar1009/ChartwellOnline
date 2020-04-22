@@ -113,11 +113,11 @@ function addLesson(){
             return;    
         }
         var video_size = video.size;
-        // if(video_size > 2000000){
-        //     $(".add_lesson_form_message").addClass("alert-danger");
-        //     $(".add_lesson_form_message").html("Video must be smaller than 20MB!");
-        //     return;
-        // }
+        if(video_size > 20000000){
+            $(".add_lesson_form_message").addClass("alert-danger");
+            $(".add_lesson_form_message").html("Video must be smaller than 20MB!");
+            return;
+        }
 
         var att_name = attachment.name;
         var att_extension = att_name.split('.').pop().toLowerCase();
@@ -127,7 +127,7 @@ function addLesson(){
             return;    
         }
         var att_size = attachment.size;
-        if(att_size > 2000000){
+        if(att_size > 20000000){
             $(".add_lesson_form_message").addClass("alert-danger");
             $(".add_lesson_form_message").html("Attachment must be smaller than 20MB!");
             return;

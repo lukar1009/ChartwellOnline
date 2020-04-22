@@ -18,7 +18,7 @@ while($row = mysqli_fetch_assoc($select_lessons_query)){
     echo    "<td>$lesson_year</td>";
     echo    "<td>$lesson_name</td>";
     echo    "<td>$lesson_desc</td>";
-    echo    "<td><button class='btn btn-danger' onclick=''>Edit</button></td>";
+    echo    "<td><a class='btn btn-danger' href='./edit_lesson.php?less=$lesson_id'>Edit</a></td>";
     echo    "<td><button class='btn btn-danger' onclick='deleteLesson($lesson_id);'>Delete</button></td>";
     echo "</tr>";
 }

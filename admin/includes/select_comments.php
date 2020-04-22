@@ -21,7 +21,6 @@ while($row = mysqli_fetch_assoc($result)){
     echo    "<td>$author</td>";
     echo    "<td>$date</td>";
     echo    "<td>$comment_content</td>";
-    echo    "<td><button class='btn btn-danger' onclick=''>Edit</button></td>";
     echo    "<td><button class='btn btn-danger' onclick='deleteComment($comment_id);'>Delete</button></td>";
     echo "</tr>";
 }
