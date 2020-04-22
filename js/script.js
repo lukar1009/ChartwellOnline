@@ -123,7 +123,7 @@ function addLesson(){
         var att_extension = att_name.split('.').pop().toLowerCase();
         if(jQuery.inArray(att_extension, ['pdf', 'zip', 'docx', 'ppt', 'xls']) == -1){
             $(".add_lesson_form_message").addClass("alert-danger");
-            $(".add_lesson_form_message").html("Invalid file extension!");
+            $(".add_lesson_form_message").html("Only .pdf, .zip, .docx, .ppt or .xls");
             return;    
         }
         var att_size = attachment.size;

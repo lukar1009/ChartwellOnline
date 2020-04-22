@@ -104,9 +104,11 @@ require "./includes/db.php"; ?>
 
                         </select>
                     </div>
+                    <label for="video" class="text-info">Only .mp3 or .mp4 videos can be uploaded!</label>
                     <div class="teacher-div formselect">
                         <input required class="" id="video" type="file" name="video"><br>
                     </div>
+                    <label for="attachment" class="text-info">Only .pdf, .zip, .docx, .ppt or .xls files can be uploaded!</label>
                     <div class="teacher-div formselect">
                         <input required class="" id="attachment" type="file" name="attachment"><br>
                     </div>
