@@ -122,29 +122,26 @@ $lesson_file = $row['lesson_file'];
     
     ?>
 
-    <div id="comments" class="col-lg-6 pl-3 pr-3 scene_element scene_element--fadeinright">
 
-        <h4 class="text-white">Previous comments:</h4>
+    <div id="comments" class="col-lg-6 align-self-center pl-3 pr-3 scene_element scene_element--fadeinright">
                  <!-- Comment -->
-        <div class="panel p-2 mb-3 bg-light rounded">
+        <!-- <div class="panel p-2 mb-3 bg-light rounded">
              <div class="panel-body">
-                 <h4 class="panel-heading">Firstname Lastname<?php //echo $comment_author; ?>
-                     <small>1.1.1970.<?php //echo $comment_date; ?></small>
+                 <h4 class="panel-heading">Firstname Lastname
+                     <small>1.1.1970.</small>
                  </h4>
                  Comment content is placed here
-                 <?php //echo $comment_content; ?>
              </div>
         </div>
-                 <!-- Comment -->
-        <div class="panel p-2 mb-3 bg-light rounded">
+         Comment
+                <div class="panel p-2 mb-3 bg-light rounded">
              <div class="panel-body">
-                 <h4 class="panel-heading">Pera Peric<?php //echo $comment_author; ?>
-                     <small>21.04.2020.<?php //echo $comment_date; ?></small>
+                 <h4 class="panel-heading">Pera Peric
+                     <small>21.04.2020.</small>
                  </h4>
                  Comment content is placed here
-                 <?php //echo $comment_content; ?>
              </div>
-        </div>
+        </div> -->
 
 
     </div>
@@ -152,11 +149,14 @@ $lesson_file = $row['lesson_file'];
     <!-- Comments Form -->
     <div class="well">
         <h4 class="text-white">Leave a Comment:</h4>
-        <form action="" method="post" role="form">
+        <div class="comment_form_message" role="alert">
+
+        </div>
+        <form action="javascript: insertContent()" method="post">
             <div class="form-group">
-                <textarea name="comment_content" class="form-control" rows="3"></textarea>
+                <textarea id="comment_content" name="comment_content" class="form-control" rows="10"></textarea>
             </div>
-            <button name="create_comment" type="submit" class="btn btn-secondary">Submit</button>
+            <button id="submit" name="create_comment" type="submit" class="btn btn-secondary">Submit</button>
         </form>
     </div>
     </div>

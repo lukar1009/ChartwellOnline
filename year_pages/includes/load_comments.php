@@ -7,13 +7,15 @@ if(isset($_POST['lesson_id'])){
     if(!$result){
         die("QUERY FAILED: ". mysqli_error($connection));
     }else{
+        echo "<h4 class='text-white'>Previous comments:</h4>";
         while($row = mysqli_fetch_assoc($result)){
             $author_name = $row['author_name'];
             $date = $row['date'];
             $comment_content = $row['comment_content'];
 
 
-            echo "<div class='panel p-2 mb-3 bg-light rounded'>";
+            
+            echo  "<div class='panel p-2 mb-3 bg-light rounded'>";
             echo  "<div class='panel-body'>";
             echo     "<h4 class='panel-heading'>$author_name";
             echo      "   <small>$date</small>";

@@ -1,3 +1,18 @@
+$(document).ready(function(){
+    setInterval(function(){
+        viewAllStudents();
+        viewAllTeachers();
+    }, 500);
+});
+
+function viewAllStudents(){
+    $("#students_table").load("./includes/select_students.php");
+}
+
+function viewAllTeachers(){
+    $("#teachers_table").load("./includes/select_teachers.php");
+}
+
 $(function(){
     $('[data-toggle="tooltip"]').tooltip();
     $(".side-nav .collapse").on("hide.bs.collapse", function() {                   
