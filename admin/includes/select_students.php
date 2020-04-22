@@ -8,6 +8,7 @@ if(!$select_students_query){
     die("QUERY2 failed: ". mysqli_error($connection));
 }
 while($row = mysqli_fetch_assoc($select_students_query)){
+    $user_id = $row['user_id'];
     $user_firstname = $row['user_firstname'];
     $user_lastname = $row['user_lastname'];
     $user_email = $row['user_email'];

@@ -2,7 +2,7 @@
 
 <?php require "./includes/navigation.php"; ?>
 
-<div id="page-wrapper" class="scene_element scene_element--fadeinup">
+<div id="page-wrapper" class="scene_element scene_element--fadeinright">
     <div class="container-fluid">
         <!-- Page Heading -->
         <div class="row" id="main" >

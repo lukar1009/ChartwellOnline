@@ -1,4 +1,11 @@
-$(document).ready(function(){
+$("#students_table").ready(function(){
+    setInterval(function(){
+        viewAllStudents();
+        viewAllTeachers();
+    }, 500);
+});
+
+$("#lessons_table").ready(function(){
     setInterval(function(){
         viewAllStudents();
         viewAllTeachers();
@@ -10,6 +17,10 @@ function viewAllStudents(){
 }
 
 function viewAllTeachers(){
+    $("#teachers_table").load("./includes/select_teachers.php");
+}
+
+function viewAllLessons(){
     $("#teachers_table").load("./includes/select_teachers.php");
 }
 
