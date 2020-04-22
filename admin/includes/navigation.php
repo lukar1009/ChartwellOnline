@@ -44,7 +44,7 @@
                     <ul id="submenu-1" class="collapse">
                         <li><a href="view_all_users.php"><i class="fa fa-angle-double-right"></i> All Users </a></li>
                         <li><a href="view_all_lessons.php"><i class="fa fa-angle-double-right"></i> All Lessons </a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> All Comments </a></li>
+                        <li><a href="view_all_comments.php"><i class="fa fa-angle-double-right"></i> All Comments </a></li>
                     </ul>
                 </li>
                 <li>
