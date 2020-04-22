@@ -85,6 +85,47 @@ function deleteComment(comment_id){
     })
 }
 
+function editProfile(user_id, password){
+    $(".edit_user_form_message").removeClass("alert");
+    $(".edit_user_form_message").removeClass("alert-success");
+    $(".edit_user_form_message").removeClass("alert-danger");
+    $(".edit_user_form_message").addClass("alert");
+
+    var new_username = $("#username").val();
+    var new_password = $("#password").val();
+    var new_firstname = $("#firstname").val();
+    var new_lastname = $("#lastname").val();
+    var new_email = $("#email").val();
+    var submit = $("#submit").val();
+
+    var form_data = new FormData();
+    form_data.append("user_id", user_id);
+    form_data.append("username", new_username);
+    form_data.append("old_password", password);
+    form_data.append("password", new_password);
+    form_data.append("firstname", new_firstname);
+    form_data.append("lastname", new_lastname);
+    form_data.append("email", new_email);
+    form_data.append("submit", submit);
+
+    $.ajax({
+        url: "./includes/update_profile.php",
+        method: "POST",
+        data: form_data,
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function(data){
+            if(data == "Successfully updated profile!"){
+                $(".edit_user_form_message").addClass("alert-success");
+            }else{
+                $(".edit_user_form_message").addClass("alert-danger");
+            }
+            $(".edit_user_form_message").html(data);
+        }
+    });
+}
+
 function editUser(user_id, password, user_role, teacher_subject_id){
     $(".edit_user_form_message").removeClass("alert");
     $(".edit_user_form_message").removeClass("alert-success");

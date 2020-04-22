@@ -28,7 +28,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="../home_page.php"><i class="fa fa-fw fa-home"></i> Home Page</a></li>
                     
-                    <li><a href="edit_profile.php"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+                    <li><a href="edit_profile.php?user=<?php echo $_SESSION['user_id']; ?>"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
                     
                     <li class="divider"></li>
                     <li><a href="../includes/logout.php"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
