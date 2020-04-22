@@ -13,6 +13,17 @@ function viewAllTeachers(){
     $("#teachers_table").load("./includes/select_teachers.php");
 }
 
+function deleteUser(user_id){
+    console.log(`Deleted ${user_id}`);
+    $.post("./includes/delete_user.php", {
+        user_id: user_id
+        }, function(data, status){
+            var response_message = data;
+            alert(response_message);
+        }
+    );
+}
+
 $(function(){
     $('[data-toggle="tooltip"]').tooltip();
     $(".side-nav .collapse").on("hide.bs.collapse", function() {                   

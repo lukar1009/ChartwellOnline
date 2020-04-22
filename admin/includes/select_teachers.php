@@ -27,8 +27,8 @@ while($row = mysqli_fetch_assoc($select_students_query)){
     echo    "<td>$user_email</td>";
     echo    "<td>$username</td>";
     echo    "<td>$teacher_subject</td>";
-    echo    "<td><a href='#'>Edit</a></td>";
-    echo    "<td><a href='#'>Delete</a></td>";
+    echo    "<td><button class='btn btn-danger' onclick=''>Edit</button></td>";
+    echo    "<td><buttton class='btn btn-danger' onclick='deleteUser($user_id);'>Delete</button></td>";
     echo "</tr>";
 }
 
